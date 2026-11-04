@@ -1,8 +1,7 @@
-from tools.tavily_tool import tavily_search
-from tools.flight_tool import search_flights
+import asyncio
+from mcp_client_test import get_all_tools
 
-#res = tavily_search("Best hotels in India")
-#print(res)
 
-res = search_flights("Plan a 7 days trip Nepal trip from Bangladesh")
-print(res)
+
+if __name__ == "__main__":
+    asyncio.run(get_all_tools())

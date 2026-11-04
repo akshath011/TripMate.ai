@@ -1,5 +1,4 @@
-import os
-from xml.parsers.expat import model 
+import os 
 import certifi
 from dotenv import load_dotenv
 
@@ -11,7 +10,7 @@ os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
 from typing import TypedDict, Annotated
 import operator
 import uuid
-import asyncio   
+import asyncio
 import psycopg
 from psycopg.rows import dict_row
 
@@ -26,14 +25,7 @@ from langchain_core.messages import (
 from langchain_groq import ChatGroq
 # from tools.tavily_tool import tavily_search
 # from tools.flight_tool import search_flights
-# from mcp_client import tavily_mcp_search, aviation_mcp_call, extract_destination, forecast_mcp_search, weather_mcp_search
-from tools.mcp_client import (
-    tavily_mcp_search,
-    aviation_mcp_call,
-    extract_destination,
-    forecast_mcp_search,
-    weather_mcp_search
-)
+from mcp_client import tavily_mcp_search, aviation_mcp_call, extract_destination, forecast_mcp_search, weather_mcp_search
 
 
 def get_database_url():
@@ -61,7 +53,7 @@ if not GROQ_API_KEY:
 # =========================
 
 llm = ChatGroq(
-    model="openai/gpt-oss-120b",  
+    model="openai/gpt-oss-120b",
     api_key=GROQ_API_KEY
 )
 

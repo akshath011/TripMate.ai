@@ -28,3 +28,6 @@ def tavily_search(query):
         results.append(f"{i}. **{title}**\n   {url}\n   {snippet}")
 
     return "\n\n".join(results)
+
+
+    # delete
